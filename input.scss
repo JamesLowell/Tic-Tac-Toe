@@ -1,0 +1,171 @@
+@import "gameBoard.scss";
+@import "gameBtn.scss";
+@import "popupModal.scss";
+@font-face {
+  font-family: "Undertale";
+  src: url("Undertale\ Font.ttf") format("truetype"),
+       url("Undertale\ Font2.ttf") format("truetype");
+}
+@mixin primaryFormat {
+  display: $primaryDisplay;
+  justify-content: $primaryPosition;
+  align-items: $primaryPosition;
+}
+
+$primaryDisplay:flex;
+$primarySize:3rem;
+$primaryPosition:center;
+
+*{
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+
+body, body p, #title, #header-container{
+  @include primaryFormat;
+}
+
+body {
+  height: 100vh;
+  flex-direction: column;
+  background-color: #004b4d;
+  font-family: "Rubik";
+}
+
+body p {
+  width: 9rem;
+  height: $primarySize;
+  background-color: #135d63;
+  border-radius: 1rem;
+  color: white;
+  font-size: 1.2rem;
+  text-align: $primaryPosition;
+  padding: 1rem;
+}
+
+#title {
+  font-family: "Undertale";
+  color: #ffffff;
+  text-shadow: 0.3rem 0.3rem #74a5aa;
+  font-size: 7rem;
+  letter-spacing: 0.5rem;
+  height: .5rem;
+  animation: fadeIn 0.5s ease-in-out forwards;
+  margin-bottom: 4rem;
+  margin-top: $primarySize;
+}
+
+#info {
+  margin-left: 0.8rem;
+}
+
+#header-container {
+  text-align: $primaryPosition;
+  height: 6rem;
+  width: 37rem;
+}
+
+#header-container button {
+  margin-left: 7rem;
+}
+
+#header-container p {
+  width: 8.7rem;
+}
+
+#logo {
+  background-color: transparent;
+  margin-right: 1.2rem;
+  width: $primarySize;
+}
+
+.cross-logo {
+  font-size: 3.8rem;
+  color: #c8ff00;
+  margin-bottom: 0.3rem;
+  font-weight: 1000;
+}
+
+.circle-logo {
+  height: $primarySize;
+  width: $primarySize;
+  border-radius: 50%;
+  border: 0.8rem solid #00eeff;
+  box-sizing: border-box;
+}
+
+@media only screen and (max-width: 1440px) {
+  
+#header-container {
+  width: 18rem;
+  height: 4rem;
+}
+  
+#header-container {
+  button{
+   margin-left: $primarySize;
+}}
+  
+#header-container {p {
+  width: 7rem;
+  margin-left: 0;
+  height: 1.5rem;
+  font-size: 1rem;
+}}
+  
+#logo {
+  background-color: transparent;
+  margin-right: 0;
+  width: 2rem;
+}
+
+#info {
+  margin-left: 0.1rem;
+}
+
+#header-container #info {
+  font-size: 0.8rem;
+}
+
+#btn-container {
+  width: 18.5rem;
+  height: 4rem;
+}
+
+#title {
+  font-size: 5rem;
+  height: 1rem;
+  margin-top: 0;
+  margin-bottom: 2rem;
+}
+  
+.cross-logo {
+  font-size: 2.5rem;
+  color: #c8ff00;
+  margin-bottom: 0.3rem;
+  font-weight: 1000;
+}
+  
+.circle-logo {
+  height: 2rem;
+  width: 2rem;
+  border-radius: 50%;
+  border: 0.4rem solid #00eeff;
+  box-sizing: border-box;
+}
+  
+}
+
+@media only screen and (max-width: 425px) {
+  
+#title {
+  font-size: $primarySize;
+}
+  
+}
+

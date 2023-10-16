@@ -1,0 +1,95 @@
+$primaryDisplay:flex;
+$primaryPosition:center;
+$playerSize:5.6rem;
+$boardSize:12.5rem;
+
+#game-board {
+  display: $primaryDisplay;
+  width: 37.5rem;
+  height: 37.5rem;
+  background-color: transparent;
+  flex-wrap: wrap;
+  border: 1rem #004b4d;
+  border-radius: 0.5rem;
+}
+
+.square {
+  display: $primaryDisplay;
+  justify-content: $primaryPosition;
+  align-items: $primaryPosition;
+  width: $boardSize;
+  height: $boardSize;
+  background-color: #135d63;
+  border: solid .5rem;
+  border-radius: 2rem;
+  border-color: #004b4d;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+.square:hover{
+  border-color: #6C969E;
+}
+
+.circle {
+  height: $playerSize;
+  width: $playerSize;
+  border-radius: 50%;
+  border: 15px solid #00eeff;
+  box-sizing: border-box;
+}
+
+.cross {
+  height: $playerSize;
+  width: $playerSize;
+  position: relative;
+  transform: rotate(45deg);
+}
+
+.cross:before,
+.cross:after {
+  content: "";
+  position: absolute;
+  background-color: #c8ff00;
+  border-radius: 0.5rem;
+}
+
+.cross:before {
+  left: 50%;
+  width: 30%;
+  margin-left: -15%;
+  height: 100%;
+}
+
+.cross:after {
+  top: 50%;
+  height: 30%;
+  margin-top: -15%;
+  width: 100%;
+}
+
+@media only screen and (max-width: 1440px) {
+
+#game-board {
+  width: 18.75rem;
+  height: 18.75rem;
+}
+
+.circle {
+  height: 3.75rem;
+  width: 3.75rem;
+}
+
+.cross {
+  height: 3.75rem;
+  width: 3.75rem;
+}
+
+.square {
+  width: 6.25rem;
+  height: 6.25rem;
+  border: solid 0.2rem;
+  border-radius: 1rem;
+  border-color: #004b4d;
+}
+  
+}

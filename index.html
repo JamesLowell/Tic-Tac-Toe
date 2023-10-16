@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Tic Tac Toe</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href='https://fonts.googleapis.com/css?family=Rubik' rel='stylesheet'>
+</head>
+
+<body>
+  <h1 id="title">Tic Tac Toe</h1>
+  <div id="header-container">
+    <p id="logo"><span class="cross-logo">&#10006;</span><span class="circle-logo"></span></p>
+    <p id="info"></p>
+    <button id="reset-button"><i class="fa fa-refresh"></i></button>
+  </div>
+  
+  <div id="game-board"></div>
+  <div id="btn-container">
+    <button id="choose-first-player-button">Choose First Player</button>
+      <div id="navigation-btn">
+        <button id="previous">&#8678;</button>
+        <button id="next">&#8680;</button>
+      </div>
+  </div>
+  
+  <div id="myModal" class="modal">
+    <div class="modal-content">
+      <h1 id="title">Tic Tac Toe</h1>
+      <div id="modal-box">
+      <span class="question">Choose the first player</span>
+      <div class="modal-button">
+        <button id="crossBtn">&#10006;</button>
+        <button id="circleBtn"><span></span></button>
+      </div>
+      <span class="go-first">CROSS FIRST | CIRCLE FIRST</span>
+      </div>
+    </div>
+  </div>
+  
+  <script src="main.js"></script>
+  <script src="modal.js"></script>
+  <script src="checkingWinner.js"></script>
+</body>
+
+</html>
